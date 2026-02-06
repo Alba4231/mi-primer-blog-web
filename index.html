@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Web: Tu Primer Sitio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILOS GENERALES (CSS) --- */
+        :root {
+            /* Paleta de Colores Pastel y Profesional */
+            --bg-color: #fdf2f8;       /* Rosa muy pálido de fondo */
+            --card-bg: #ffffff;        /* Blanco para lectura */
+            --primary-pink: #fbcfe8;   /* Rosa pastel para detalles */
+            --accent-pink: #be185d;    /* Rosa fuerte para texto importante */
+            --text-gray: #374151;      /* Gris oscuro para texto (más pro que el negro) */
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* --- ENCABEZADO --- */
+        header {
+            background-color: var(--card-bg);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+            border-bottom: 3px solid var(--primary-pink);
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--accent-pink);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-gray);
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-pink);
+        }
+
+        /* --- SECCIÓN HERO (PRINCIPAL) --- */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, var(--bg-color) 0%, #fce7f3 100%);
+        }
+
+        .hero h1 {
+            color: var(--accent-pink);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-pink);
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* --- CONTENIDO DEL BLOG --- */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .blog-post {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-pink);
+        }
+
+        .blog-post h2 {
+            color: var(--accent-pink);
+            margin-top: 0;
+        }
+
+        .step-number {
+            background-color: var(--primary-pink);
+            color: var(--accent-pink);
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--accent-pink);
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🌸 DevBlog</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#guia">Guía</a>
+            <a href="#recursos">Recursos</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>¿Cómo crear una página web?</h1>
+        <p>Una guía paso a paso diseñada para principiantes.</p>
+        <a href="#guia" class="btn">Empezar a aprender</a>
+    </section>
+
+    <div class="container" id="guia">
+        
+        <div class="blog-post">
+            <h2>Bienvenido al mundo del desarrollo web</h2>
+            <p>Crear una página web es una de las habilidades más valiosas hoy en día. En este blog, exploraremos los conceptos básicos para construir tu primer sitio desde cero utilizando herramientas profesionales.</p>
+        </div>
+
+        <div class="blog-post">
+            <h2><span class="step-number">Paso 1</span> Planificación y Diseño</h2>
+            <p>Antes de escribir código, necesitas saber qué vas a construir. Define el propósito de tu sitio y elige una paleta de colores. Para este ejemplo, hemos elegido un estilo <strong>minimalista con tonos pastel</strong> para transmitir calma y profesionalismo.</p>
+        </div>
+
+        <div class="blog-post">
+            <h2><span class="step-number">Paso 2</span> HTML y CSS</h2>
+            <p>El <strong>HTML</strong> es el esqueleto de tu web (los textos, imágenes y botones), mientras que el <strong>CSS</strong> es la piel (colores, fuentes y espacios). Juntos forman la estructura visual que ves ahora mismo.</p>
+        </div>
+
+        <div class="blog-post">
+            <h2><span class="step-number">Paso 3</span> Publicación (Hosting)</h2>
+            <p>Para que el mundo vea tu página, necesitas un servidor. En este proyecto, estamos utilizando <strong>GitHub Pages</strong>, una herramienta gratuita que permite alojar sitios estáticos directamente desde un repositorio de código.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Creado para la clase de Informática | 2024</p>
+    </footer>
+
+</body>
+</html>
